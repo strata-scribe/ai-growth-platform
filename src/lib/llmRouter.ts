@@ -2,7 +2,7 @@
 
 Here's a TypeScript async function that attempts to get a response from free LLM APIs (Gemini 1.5 Flash and HuggingFace Mistral-7B-Instruct) with proper timeout handling:
 
-```typescript
+
 /**
  * Tries free LLM APIs in sequence and returns the first successful response.
  * Attempts Gemini 1.5 Flash first, then HuggingFace Mistral-7B-Instruct.
@@ -202,7 +202,7 @@ async function main() {
 
 // Run if executed directly
 main().catch(console.error);
-```
+
 
 ## Environment Setup
 
@@ -212,13 +212,13 @@ Create a `.env` file or set environment variables:
 # .env
 GEMINI_API_KEY=your_gemini_api_key_here
 HF_API_KEY=your_huggingface_api_key_here
-```
+
 
 ## Alternative Version with Custom Timeout Polyfill
 
 If you're using an older Node.js version that doesn't support `AbortSignal.timeout()`:
 
-```typescript
+
 /**
  * Polyfill for AbortSignal.timeout for older environments
  */
@@ -241,7 +241,7 @@ function createTimeoutSignal(ms: number): AbortSignal {
   
   return controller.signal;
 }
-```
+
 
 ## Key Features
 

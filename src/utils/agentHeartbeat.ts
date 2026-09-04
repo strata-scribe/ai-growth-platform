@@ -2,7 +2,7 @@
 
 Here's a comprehensive TypeScript utility function that upserts agent heartbeat data to a Supabase `agent_status` table:
 
-```typescript
+
 /**
  * Heartbeat utility for agent status tracking
  * Upserts agent status to Supabase with active status and incremented request count
@@ -229,7 +229,7 @@ export async function sendHeartbeatWithRetry(
 
 // Export types for consumers
 export type { AgentStatusRecord, HeartbeatResponse };
-```
+
 
 ## SQL Schema for Supabase
 
@@ -291,11 +291,11 @@ ALTER TABLE agent_status ENABLE ROW LEVEL SECURITY;
 CREATE POLICY "Service role has full access" ON agent_status
   FOR ALL
   USING (auth.role() = 'service_role');
-```
+
 
 ## Usage Examples
 
-```typescript
+
 import { 
   sendHeartbeat, 
   sendHeartbeatAtomic, 
@@ -355,7 +355,7 @@ function startHeartbeatInterval(
   // Return cleanup function
   return () => clearInterval(intervalId);
 }
-```
+
 
 ## Key Features
 

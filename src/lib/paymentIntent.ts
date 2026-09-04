@@ -2,7 +2,7 @@
 
 This TypeScript module provides a complete implementation for creating and verifying x402 payment intents for USDC payments on the Base network.
 
-```typescript
+
 // x402-payment-intent.ts
 // A comprehensive module for x402 payment intents with USDC on Base
 
