@@ -76,7 +76,7 @@ function NeuralCanvas({ color }: { color: string }) {
 function AnimatedNumber({ value, decimals = 0 }: { value: number; decimals?: number }) {
   const [display, setDisplay] = useState(0);
   useEffect(() => {
-    let start = display;
+    const start = display;
     const end = value;
     if (start === end) return;
     const dur = 800;

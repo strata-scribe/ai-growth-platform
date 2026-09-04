@@ -77,7 +77,7 @@ Réponds en JSON: { "adjustments": [{"slug": "...", "new_price": 0.XXX, "reason"
   } catch { /* log silently */ }
 
   // 5. Appliquer les ajustements et calculer commission
-  let total_revenue_before = services.reduce((s, svc) => s + Number(revenueByService[svc.id] ?? 0), 0);
+  const total_revenue_before = services.reduce((s, svc) => s + Number(revenueByService[svc.id] ?? 0), 0);
   let estimated_gain = 0;
 
   for (const adj of adjustments) {
