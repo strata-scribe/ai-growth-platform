@@ -1,4 +1,4 @@
-```typescript
+
 /**
  * Federation Welcome Messages Module
  * 
@@ -74,11 +74,11 @@ export function getSupportedLanguages(): (keyof FederationMessages)[] {
 
 // Default export
 export default FEDERATION_MESSAGES;
-```
+
 
 ## Usage Example
 
-```typescript
+
 // Named import
 import { FEDERATION_MESSAGES, getMessage, getSupportedLanguages } from './federation-messages';
 
@@ -94,4 +94,3 @@ console.log(getMessage('ja'));
 
 // Get supported languages
 console.log(getSupportedLanguages()); // ['en', 'fr', 'zh', 'es', 'de', 'ja', 'ko', 'pt', 'ar', 'ru']
-```

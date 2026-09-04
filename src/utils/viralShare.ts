@@ -4,7 +4,7 @@ A comprehensive utility for generating viral share links with referral codes, UR
 
 ## Implementation
 
-```typescript
+
 /**
  * Viral Share Link Generator with Referral Codes
  * 

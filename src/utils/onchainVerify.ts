@@ -2,7 +2,7 @@
 
 Here's a comprehensive TypeScript async function that verifies USDC transfers on Base and Polygon networks by querying public EVM RPCs:
 
-```typescript
+
 import { keccak256, toUtf8Bytes } from "ethers";
 
 // USDC contract addresses per chain

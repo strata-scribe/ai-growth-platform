@@ -2,7 +2,7 @@
 
 A comprehensive TypeScript utility for calculating revenue distribution in an AI agent platform ecosystem.
 
-```typescript
+
 /**
  * AI Agent Platform Revenue Sharing Calculator
  * 
