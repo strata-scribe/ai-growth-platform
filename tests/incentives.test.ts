@@ -5,7 +5,7 @@ import {
   calculateAgentNetEarnings,
   createConfig,
   calculatePercentage,
-  DEFAULT_CONFIG
+
 } from '../src/utils/revenueCalculator';
 
 describe('Incentives and Commissions Calculator', () => {
