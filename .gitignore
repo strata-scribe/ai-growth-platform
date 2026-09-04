@@ -39,3 +39,6 @@ service-account*.json
 *.secret
 
 *.zip
+
+__pycache__/
+*.pyc
