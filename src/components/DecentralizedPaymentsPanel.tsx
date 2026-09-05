@@ -202,7 +202,7 @@ export function DecentralizedPaymentsPanel() {
       await navigator.clipboard.writeText(text);
       setCopied(label);
       setTimeout(() => setCopied(null), 1500);
-    } catch (_e) { /* noop */ }
+    } catch { /* noop */ }
   };
 
   const createIntent = async () => {
@@ -260,7 +260,6 @@ export function DecentralizedPaymentsPanel() {
   };
 
   const fullAddress = info?.address || watch?.watch_address || '';
-  const masked = info?.masked || '';
   const explorerUrl = fullAddress ? `https://basescan.org/token/0x833589fcd6edb6e08f4c7c32d4f71b54bda02913?a=${fullAddress}` : '';
   const healthyRpcs = rpcs.filter((r) => (r.ok_count || 0) > 0 || ((r.fail_count || 0) === 0)).length;
 

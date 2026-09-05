@@ -1,4 +1,4 @@
-import { Rocket, Lightbulb, Users, Clock, Activity, Zap, Target, Shield, Radio, Briefcase } from 'lucide-react';
+import { Rocket, Lightbulb, Users, Zap, Target, Shield, Radio, Briefcase } from 'lucide-react';
 import { usePolledEdge } from '../lib/hooks';
 
 interface FactoryStatus {
@@ -21,7 +21,6 @@ export function ExpansionDashboard() {
   const signals = data?.signals ?? { total: 0, by_status: {} };
   const ideas = data?.ideas ?? { total: 0, by_status: {}, last_new_idea: null, last_launch: null };
   const portfolio = data?.portfolio ?? { total: 0, by_status: {} };
-  const revenue = data?.revenue ?? { reconciled_net: 0, destination: '' };
 
   const timeSince = (iso: string | null) => {
     if (!iso) return 'never';

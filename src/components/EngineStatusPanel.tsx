@@ -1,4 +1,4 @@
-import { Cpu, ShieldAlert, Zap, AlertOctagon, CheckCircle2, Clock, Inbox, RotateCw, TrendingUp, XCircle } from 'lucide-react';
+import { Cpu, ShieldAlert, Zap, AlertOctagon, CheckCircle2, Inbox, RotateCw, TrendingUp, XCircle } from 'lucide-react';
 import { useQueueStatus, useSecurityGates, useExpansionStatus } from '../lib/hooks';
 import { Card, CardHeader, CardBody } from './Card';
 import { Skeleton } from './Skeleton';

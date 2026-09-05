@@ -104,7 +104,7 @@ export function AgenticPartnershipPanel() {
       await navigator.clipboard.writeText(text);
       setCopied(label);
       setTimeout(() => setCopied(null), 1500);
-    } catch (_e) { /* noop */ }
+    } catch { /* noop */ }
   };
 
   const register = async () => {

@@ -110,7 +110,7 @@ function PulseRing({ healthy }: { healthy: boolean }) {
 
 export function AutonomousEnginePanel() {
   const { data, loading, error } = useEngineState();
-  const [tick, setTick] = useState(0);
+  const [, setTick] = useState(0);
   useEffect(() => { const id = setInterval(() => setTick(t => t + 1), 2000); return () => clearInterval(id); }, []);
 
   if (loading && !data) {
