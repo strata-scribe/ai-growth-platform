@@ -9,6 +9,7 @@ import { keccak256, toUtf8Bytes } from "ethers";
 const USDC_ADDRESSES: Record<number, string> = {
   8453: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913", // Base (native USDC)
   137: "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359", // Polygon (native USDC)
+  84532: "0x036CbD53842c5426634e7929541eC2318f3dCF7e", // Base Sepolia (Testnet USDC)
 };
 
 // Public RPC endpoints per chain
@@ -22,6 +23,10 @@ const RPC_ENDPOINTS: Record<number, string[]> = {
     "https://polygon-rpc.com",
     "https://polygon.llamarpc.com",
     "https://polygon-bor-rpc.publicnode.com",
+  ],
+  84532: [
+    "https://sepolia.base.org",
+    "https://base-sepolia-rpc.publicnode.com"
   ],
 };
 
@@ -310,7 +315,7 @@ async function verifyUSDCTransfer(
   const usdcAddress = USDC_ADDRESSES[chainId];
   if (!usdcAddress) {
     throw new VerificationError(
-      `Unsupported chain ID: ${chainId}. Supported chains: Base (8453), Polygon (137)`,
+      `Unsupported chain ID: ${chainId}. Supported chains: Base (8453), Polygon (137), Base Sepolia (84532)`,
       "UNSUPPORTED_CHAIN",
       { chainId, supportedChains: Object.keys(USDC_ADDRESSES) }
     );
